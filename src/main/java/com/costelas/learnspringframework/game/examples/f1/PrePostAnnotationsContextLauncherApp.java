@@ -1,6 +1,7 @@
 package com.costelas.learnspringframework.game.examples.f1;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,12 @@ class SomeClass {
     public void initialize() {
         someDependency.getReady();
     }
+
+    @PreDestroy // used on a method as a callback notif to signal that the instance is in the process of being removed
+    public void cleanUp() {
+        System.out.println("CleanUp");
+    }
+
 }
 
 @Component
