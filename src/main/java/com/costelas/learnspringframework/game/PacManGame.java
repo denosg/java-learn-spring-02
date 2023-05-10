@@ -1,10 +1,10 @@
 package com.costelas.learnspringframework.game;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Configuration("PacManGame")
+@Qualifier("PacManGame")
 public class PacManGame implements GamingConsole {
     @Override
     public void up() {

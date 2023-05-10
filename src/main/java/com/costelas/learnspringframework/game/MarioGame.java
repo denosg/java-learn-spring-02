@@ -1,10 +1,10 @@
 package com.costelas.learnspringframework.game;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Configuration("MarioGame")
+@Qualifier("MarioGame")
 public class MarioGame implements GamingConsole {
 
     @Override
